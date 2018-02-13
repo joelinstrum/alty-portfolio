@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Altynay Linstrum</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/glitch.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body class="graybg">
+	<div class="home-line"></div>
+	<div class="home-line2"></div>
+	<div class="home-line3"></div>
+	<div class="background">
+		<div class="nav">
+			<a class="a active" href="#" data-div="home">HOME</a>
+			<a class="b" href="#" data-div="about">ABOUT</a>
+			<a class="c" href="#" data-div="gallery">WORK</a>
+			<a class="d" href="#" data-div="contact-items">CONTACT</a>		
+		</div>
+		<div class="content">
+			<div class="home">
+				<p>Altynay Linstrum</p>
+				<h3>front-end developer</h3>
+			</div>
+			<div class="about">
+				<h2>Hello and welcome to my site.</h2><br> 
+				<p>I am a front-end developer and project manager. I am passionate about front-end technologies. 
+					My favorite programming language is JavaScript. I am always amazed at how powerful and intricate it is.<br> I love creating websites because it involves both logical and creative processes. My dream is to get involved in projects that are meaningful and directed at helping people.</p><br>
+				<h2>Skills</h2><i class="fas fa-angle-down"></i>
+				<h2>Resume</h2><i class="fas fa-angle-down"></i>
+			</div>
+			<div class="gallery">
+				<a href="#" >Foodsnap</a><span class="gallery-span7"> app for sharing snapshots of food</span><br>
+				<a href="nbaStats.html" >nbaStats</a><span class="gallery-span7"> basketball news and stats</span><br>
+				<a href="#" >BCF</a><span class="gallery-span7"> financial services and brokerage website</span><br>
+				<a href="#" >dataScraper</a><span class="gallery-span7"> app for generating news articles</span><br>
+				<a href="#" >GrubWorld</a><span class="gallery-span7"> informational ethnic food app</span><br>
+				<a href="movieGif.html">movieGif</a><span class="gallery-span7"> a movie gif generator with ReactJS and ajax</span><br>
+			</div>
+			<div class="contact-items">
+				<p>Thanks for visiting! I would love to hear from you soon.<br>Email:​ ​altynaylinstrum@yahoo.com​ ​<br>San​ ​Francisco,​ ​CA​​</p>
+				<div id="social">
+					<ul class="social-media-ul">
+						<li><a href="https://www.linkedin.com/in/altynaylinstrum/" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+						<li><a href="https://www.facebook.com/AltynayLunaLinstrum" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+						<li><a href="https://github.com/AltynayLuna" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("a").click(function(){
+				var selected = $(this);
+				$("a").removeClass("active");
+				$(selected).addClass("active");
+			});
+
+			let navParent = document.querySelector(".nav");
+			let navItems = navParent.getElementsByTagName("a");
+			for(let i=0; i<navItems.length; i++){
+				let anchor = navItems[i];
+				anchor.onclick = () => {
+					fade(anchor, navItems);
+				}
+			};
+
+			// this sets up the onmouseover functions for the gallery-work a hrefs
+			let workRefs = document.querySelector(".gallery");
+			let children = workRefs.getElementsByTagName("a");
+			for (var i = 0; i < children.length; i++) {
+				let child = children[i];
+				child.onmouseover = ()=>{
+					fadeWork(child);
+				};
+				child.onmouseout = () => {
+					fadeWorkInfo(child);
+				}
+			}
+		});	
+	</script>
+</body>
+</html>
