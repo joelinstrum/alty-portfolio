@@ -529,3 +529,52 @@ a.active {
 	height:60%;
 	width:60%;
 }
+
+/*GRUBWORLD PROJECT*/
+.grubworld-ul {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	padding: 0;
+	width: 600px;
+	height: 150px;
+	/*display: flex;
+	justify-content: center;
+	align-self: center;*/
+}
+.grubworld-ul li {
+	list-style: none;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background: #000;
+	margin: -100px;
+	transform: rotate(45deg);
+	transition: .5s;
+	overflow: hidden;
+}
+.grubworld-ul li.item1 {
+	top: 0;
+	left: 0;	
+}
+.grubworld-ul li.item2 {
+	bottom: 0;
+	left: 25%;	
+}
+.grubworld-ul li.item3 {
+	top: 0;
+	left: 50%;	
+}
+.grubworld-ul li.item4 {
+	bottom: 0;
+	left: 75%;	
+}
+.grubworld-ul li.item5 {
+	top: 0;
+	left: 100%;	
+}
+.grubworld-ul li.item .bg {
+	background: url();
+}
