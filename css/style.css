@@ -14,6 +14,9 @@ html, body {
 	font-family: verdana;
 	overflow-x: hidden; 
 }
+body p {
+	font-size: 1.3em;
+}
 .background {
 	display: flex;
 	background: #111;
@@ -141,8 +144,16 @@ a.active, .nav a:hover {
 }
 .fa-angle-down {
 	font-size: 1em;
+	cursor: pointer;
 }
+#skills-div {
+	display: none;
+}
+#resume-div a {
+	text-decoration: none;
+	color: #fff;
 
+}
 /*****PROJECTS******/
 
 .gallery {
@@ -237,28 +248,8 @@ a.active, .nav a:hover {
 	box-shadow: 0 10px 10px rgba(0,0,0,.5);
 }
 
-/*MOVIE GIF PROJECT*/
 
-.gif-home-line {
-	min-height: 40px;
-	border-bottom: 1px solid #f95788;
-	animation: home-line-grow 1.5s ease-in;
-}
-
-.gif-home-line3 {
-	position: absolute;
-	left: 97%;
-	top: 0;
-	width: 1px;	
-	height: 100%;
-	background: #f70455;
-	animation: home-line-grow3 1.5s ease-in;
-}
-.background1 {
-	display: flex;
-	flex-direction: column;
-}
-/*NAVBAR*/
+/*FOODSNAP PROJECT*/
 .main-nav {
   display: flex;
   flex-direction: column;
@@ -276,87 +267,134 @@ ul.nav2 li {
   list-style: none;
   width: 20%;
   margin: 1%;
+  color: #fff;
 }
 .nav2 a {
 	text-decoration: none;
-	font-size: 1em;
+	font-size: .8em;
 	font-family: verdana;
 	font-weight: bold;
 	margin: 5px 0;
-	/*background-color: #000;*/
-	line-height: 5em;
+	line-height: 4em;
 	text-align: center;
 	transition: 600ms;
-	/*color: #fff;*/
-	color: #000;
+	/*color: #000;*/
 	width: 100%;
+  	color: #fff;
+  	background: #000;
 }
 .nav2 a.active, .nav2 a:hover {
 	background: #fff;
-	color: #f70455;
+	color: #000;
 	width: 100%;
-	/*text-decoration: underline;*/
-	/*border-bottom: 1px solid #f70455;*/
 }
-a.active {
-	/*color: #f70455;*/
+#technologies {
+	margin-top:10px;
+	margin-bottom:10px;
+
+}
+#technologies li {
+	list-style: none;
+	/*margin-top: 1%;*/
+	font-size: 1.3em;
+}
+#landing-header {
+  z-index: 10;
+  position: absolute;
+  top:30%;
+  width:100%;
+  text-align: center;
+}
+#landing-header h1 {
+	/*text-shadow:1px 1px 1px rgba(255,255,255,1);*/
+	color: #fff;
+	font-weight: 500;
+    line-height: 1.1;
+    font-size: 36px;
+    font-family: sans-serif;
+    padding-bottom: 3%;
+}
+#foodsnap-container {
+	position:relative;
+	width:50%;
+	min-height:350px;
+}
+#landing-header button {
+	background: #5cb85c;
+	color: #fff;
+	border-color: #4cae4c;
+	font-weight: 400;
+	text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+	border: 1px solid transparent;
+	padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+.slideshow { 
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height:350px;
+  z-index: 5;
+  list-style: none;
+  padding: 0;
+  border:1px solid #000;
+}
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+.slideshow li:nth-child(1) { 
+  background-image: url(https://images.pexels.com/photos/8717/food-pot-kitchen-cooking.jpg?h=350&auto=compress&cs=tinysrgb) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://images.pexels.com/photos/236781/pexels-photo-236781.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb);
+  animation-delay: 5s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?h=350&auto=compress&cs=tinysrgb);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://images.pexels.com/photos/262918/pexels-photo-262918.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb);
+  animation-delay: 30s; 
 }
 
-/*PROJECTS*/
-.fold-div {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin: 5%;
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
 }
-#fold-div-ul {
-	/*transform: translate(50%, 50%);*/
-	width: 640px;
-	height: 360px;
-	display: flex;
-	justify-content: center;
-	align-self: center;
-}
-#fold-div-ul li {
-	list-style: none;
-	width: 25%;
-	background: url("../images/gif.png");
-	background-size: cover;
-	height: 100%;
-	transition: .5s;
-	display: flex;
-}
-#fold-div-ul:hover li:nth-child(odd){
-	transform: skewY(15deg);
-	box-shadow: inset 20px 0 50px rgba(0,0,0,.5);
-}
-#fold-div-ul:hover li:nth-child(even){
-	transform: skewY(-15deg);
-	box-shadow: inset 20px 0 50px rgba(0,0,0,.5);
-}
-#fold-div-ul li:nth-child(1){
-	background-position: 0; 
-}
-#fold-div-ul li:nth-child(2){
-	background-position: -160px; 
-}
-#fold-div-ul li:nth-child(3){
-	background-position: calc(-160px * 2); 
-}
-#fold-div-ul li:nth-child(4){
-	background-position: calc(-160px * 3); 
-}
-.fold-div-content {
-	padding: 3%;
-	margin: 5%;
-	margin-top:1%;
-	position:relative;
-	z-index:25;
-}
+
 
 /*NBASTATS PROJECT*/
-
 .nba-body{
 	display: flex;
 	perspective: 1000px;
@@ -425,96 +463,6 @@ a.active {
 	}
 }
 
-/*FOODSNAP PROJECT*/
-#technologies {
-	margin-top:10px;
-}
-#technologies li {
-	list-style: none;
-	margin-top:5px;
-}
-
-.foodsnap-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#landing-header {
-  z-index: 10;
-  position: absolute;
-  top:10%;
-  width:100%;
-  text-align: center;
-}
-#landing-header h1 {
-	text-shadow:1px 1px 1px rgba(255,255,255,1);
-}
-#foodsnap-container {
-	position:relative;
-	width:50%;
-	min-height:350px;
-}
-.slideshow { 
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height:350px;
-  z-index: 5;
-  list-style: none;
-  padding: 0;
-  border:1px solid #000;
-}
-
-.slideshow li { 
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  opacity: 0;
-  z-index: 0;
-  animation: imageAnimation 50s linear infinite; 
-}
-
-.slideshow li:nth-child(1) { 
-  background-image: url(https://images.pexels.com/photos/8717/food-pot-kitchen-cooking.jpg?h=350&auto=compress&cs=tinysrgb) 
-}
-.slideshow li:nth-child(2) { 
-  background-image: url(https://images.pexels.com/photos/236781/pexels-photo-236781.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb);
-  animation-delay: 5s; 
-}
-.slideshow li:nth-child(3) { 
-  background-image: url(https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?h=350&auto=compress&cs=tinysrgb);
-  animation-delay: 10s; 
-}
-.slideshow li:nth-child(4) { 
-  background-image: url(https://images.pexels.com/photos/262918/pexels-photo-262918.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb);
-  animation-delay: 20s; 
-}
-.slideshow li:nth-child(5) { 
-  background-image: url(https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb);
-  animation-delay: 30s; 
-}
-
-@keyframes imageAnimation { 
-  0% { 
-    opacity: 0; 
-    animation-timing-function: ease-in;
-  }
-  10% {
-    opacity: 1;
-    animation-timing-function: ease-out;
-  }
-  20% {
-    opacity: 1
-  }
-  30% {
-    opacity: 0
-  }
-}
 
 /*BCF PROJECT*/
   .fullscreen-video-wrap{
@@ -530,19 +478,25 @@ a.active {
 	width:60%;
 }
 
+
+/*NEWS SCRAPER*/
+
+
 /*GRUBWORLD PROJECT*/
 .grubworld-ul {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	margin: 0;
-	padding: 0;
-	width: 600px;
+	/*top: 50%;*/
+	/*left: 50%;*/
+	/*transform: translate(-50%, -50%);*/
+	/*margin: 0;*/
+	/*padding: 0;*/
+	/*width: 600px;*/
 	height: 150px;
-	/*display: flex;
-	justify-content: center;
-	align-self: center;*/
+	position:relative;
+	width:50%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	/*min-height:350px;*/
 }
 .grubworld-ul li {
 	list-style: none;
@@ -554,6 +508,10 @@ a.active {
 	transform: rotate(45deg);
 	transition: .5s;
 	overflow: hidden;
+	opacity: .7;
+}
+.grubworld-ul li:hover {
+	opacity: 1;
 }
 .grubworld-ul li.item1 {
 	top: 0;
@@ -575,6 +533,106 @@ a.active {
 	top: 0;
 	left: 100%;	
 }
-.grubworld-ul li.item .bg {
-	background: url();
+.grubworld-ul li.bg {
+	width: 100%;
+	height: 100%;
+	transform: rotate(-45deg) scale(1.42);
+}
+.grubworld-ul li.item1 .bg {
+	background: url("../images/item-1.jpg");
+	background-size: cover; 
+	height: 100%;
+}
+.grubworld-ul li.item2 .bg {
+	background: url("../images/item-2.jpg");
+	background-size: cover; 
+	height: 100%;
+}
+.grubworld-ul li.item3 .bg {
+	background: url("../images/item-3.jpg");
+	height: 100%;
+	background-size: cover; 
+}
+.grubworld-ul li.item4 .bg {
+	background: url("../images/item-4.jpg");
+	height: 100%;
+	background-size: cover; 
+}
+.grubworld-ul li.item5 .bg {
+	background: url("../images/item-5.jpg");
+	height: 100%;
+	background-size: cover; 
+}
+
+
+/*MOVIE GIF PROJECT*/
+.gif-home-line {
+	min-height: 40px;
+	border-bottom: 1px solid #000;
+	animation: home-line-grow 1.5s ease-in;
+}
+.gif-home-line3 {
+	position: absolute;
+	left: 97%;
+	top: 0;
+	width: 1px;	
+	height: 100%;
+	background: #000;
+	animation: home-line-grow3 1.5s ease-in;
+}
+.background1 {
+	display: flex;
+	flex-direction: column;
+}
+
+.fold-div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 5%;
+}
+#fold-div-ul {
+	width: 640px;
+	height: 360px;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+#fold-div-ul li {
+	list-style: none;
+	width: 25%;
+	background: url("../images/gif.png");
+	background-size: cover;
+	height: 100%;
+	transition: .5s;
+	display: flex;
+}
+#fold-div-ul:hover li:nth-child(odd){
+	transform: skewY(15deg);
+	box-shadow: inset 20px 0 50px rgba(0,0,0,.5);
+}
+#fold-div-ul:hover li:nth-child(even){
+	transform: skewY(-15deg);
+	box-shadow: inset 20px 0 50px rgba(0,0,0,.5);
+}
+#fold-div-ul li:nth-child(1){
+	background-position: 0; 
+}
+#fold-div-ul li:nth-child(2){
+	background-position: -160px; 
+}
+#fold-div-ul li:nth-child(3){
+	background-position: calc(-160px * 2); 
+}
+#fold-div-ul li:nth-child(4){
+	background-position: calc(-160px * 3); 
+}
+.fold-div-content {
+	width: 60%;
+	padding: 3%;
+	margin: 3%;
+	position:relative;
+	z-index:25;
+	font-size: 1em;
 }

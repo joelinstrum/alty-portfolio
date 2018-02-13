@@ -36,14 +36,12 @@ function fadeWorkInfo(oldDiv){
 	childSpan.setAttribute("class", "gallery-span7");
 }
 
-// // PROJECTS
-// $(".gallery-1").hover(function(){
-//     $('.gallery-span1').show();
-// },function(){
-//     $('.gallery-span1').hide();
-// });
-// $(".gallery-7").hover(function(){
-//     $('.gallery-span7').show();
-// },function(){
-//     $('.gallery-span7').hide();
-// });
+
+function showSkills() {
+	let x = document.getElementById('skills-div');
+	if (x.style.display === 'block') {
+		x.style.display = 'none';
+	} else {
+		x.style.display = 'block';
+	}
+}
