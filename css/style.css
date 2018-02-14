@@ -431,9 +431,15 @@ ul.nav2 li {
     opacity: 0
   }
 }
-
+.go-back-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .go-back-icon {
-	font-size: 2em;
+	font-size: 1.2em;
+	padding: 5px;
+	cursor: pointer;
 }
 /*NBASTATS PROJECT*/
 .nba-body{
@@ -549,7 +555,15 @@ ul.nav2 li {
 
 
 /*NEWS SCRAPER*/
-
+  .fullscreen-video-wrap2{
+	display: flex;
+	justify-content: center;
+	align-self: center;
+} 
+.fullscreen-video-wrap2 video{
+	width: 60%;
+	height: 60%;
+}
 
 /*GRUBWORLD PROJECT*/
 .grubworld-ul {
