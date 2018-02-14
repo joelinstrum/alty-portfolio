@@ -179,7 +179,38 @@ a.active, .nav a:hover {
 	transition: 1000ms;
 	opacity: 1;
 }
+.gallery-span2 {
+	transition: 1000ms;
+	font-size: .5em;
+	color: red;
+	opacity: 0;
+}
+.gallery-span3 {
+	transition: 1000ms;
+	font-size: .5em;
+	color: blue;
+	opacity: 0;
+}
+.gallery-span4 {
+	transition: 1000ms;
+	font-size: .5em;
+	color: green;
+	opacity: 0;
+}
+.gallery-span5 {
+	transition: 1000ms;
+	font-size: .5em;
+	color: yellow;
+	opacity: 0;
+}
+.gallery-span6 {
+	transition: 1000ms;
+	font-size: .5em;
+	color: orange;
+	opacity: 0;
+}
 .gallery-span7 {
+	transition: 1000ms;
 	font-size: .5em;
 	color: #f70455;
 	opacity: 0;
@@ -393,7 +424,9 @@ ul.nav2 li {
   }
 }
 
-
+.go-back-icon {
+	font-size: 2em;
+}
 /*NBASTATS PROJECT*/
 .nba-body{
 	display: flex;
@@ -635,4 +668,25 @@ ul.nav2 li {
 	position:relative;
 	z-index:25;
 	font-size: 1em;
+}
+
+/* MEDIA QUEIRIES */
+@media screen and (max-width: 500px) {
+	ul.nav2 li {   
+		width: 10%;
+	}	
+}
+
+@media screen and (min-width: 501px) and (max-width: 1024px) {
+	.nav a {
+		height: auto;
+	}		
+	ul.nav2 li {   
+		width: 15%;
+	}	
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+	.nav a {
+		height: auto;
+	}
 }

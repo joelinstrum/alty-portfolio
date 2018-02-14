@@ -13,7 +13,7 @@
 	<div class="home-line3"></div>
 	<div class="background">
 		<div class="nav">
-			<a class="a active" href="#" data-div="home">HOME</a>
+			<a class="a" href="#" data-div="home">HOME</a>
 			<a class="b" href="#" data-div="about">ABOUT</a>
 			<a class="c" href="#" data-div="gallery">WORK</a>
 			<a class="d" href="#" data-div="contact-items">CONTACT</a>		
@@ -49,11 +49,11 @@
 				</div>
 			</div>
 			<div class="gallery">
-				<a href="foodSnap.html" >Foodsnap</a><span class="gallery-span7"> app for sharing snapshots of food</span><br>
-				<a href="nbaStats.html" >nbaStats</a><span class="gallery-span7"> basketball news and stats</span><br>
-				<a href="bcf.html" >BCF</a><span class="gallery-span7"> financial services and brokerage website</span><br>
-				<a href="newsScraper.html" >newsScraper</a><span class="gallery-span7"> app for generating news articles</span><br>
-				<a href="grubWorld.html" >GrubWorld</a><span class="gallery-span7"> informational ethnic food app</span><br>
+				<a href="foodSnap.html" >Foodsnap</a><span class="gallery-span2 "> app for sharing pics of food</span><br>
+				<a href="nbaStats.html" >nbaStats</a><span class="gallery-span3"> basketball news and stats app</span><br>
+				<a href="bcf.html" >BCF</a><span class="gallery-span4"> financial services and brokerage website</span><br>
+				<a href="newsScraper.html" >newsScraper</a><span class="gallery-span5"> NYT article generator</span><br>
+				<a href="grubWorld.html" >GrubWorld</a><span class="gallery-span6"> informational ethnic food app</span><br>
 				<a href="movieGif.html">movieGif</a><span class="gallery-span7"> a movie gif generator with ReactJS and ajax</span><br>
 			</div>
 			<div class="contact-items">
@@ -78,14 +78,7 @@
 				$(selected).addClass("active");
 			});
 
-			let navParent = document.querySelector(".nav");
-			let navItems = navParent.getElementsByTagName("a");
-			for(let i=0; i<navItems.length; i++){
-				let anchor = navItems[i];
-				anchor.onclick = () => {
-					fade(anchor, navItems);
-				}
-			};
+			
 
 			// this sets up the onmouseover functions for the gallery-work a hrefs
 			let workRefs = document.querySelector(".gallery");
@@ -93,12 +86,13 @@
 			for (var i = 0; i < children.length; i++) {
 				let child = children[i];
 				child.onmouseover = ()=>{
-					fadeWork(child);
+					highlightWork(child);
 				};
 				child.onmouseout = () => {
 					fadeWorkInfo(child);
 				}
 			}
+			setTabs();
 		});	
 	</script>
 </body>
