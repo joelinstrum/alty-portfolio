@@ -339,6 +339,13 @@ ul.nav2 li {
 	/*margin-top: 1%;*/
 	font-size: 1.3em;
 }
+#technologies a {
+	text-decoration: none;
+	color: #000;
+}
+#technologies a:hover {
+	color: blue;
+}
 #landing-header {
   z-index: 10;
   position: absolute;
