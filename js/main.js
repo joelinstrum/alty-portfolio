@@ -58,7 +58,7 @@ function setTabs(){
 	let navItems = navParent.getElementsByTagName("a");
 	for(let i=0; i<navItems.length; i++){
 		let anchor = navItems[i];
-		anchor.onclick = () => {
+		anchor.parentNode.onclick = () => {
 			highlight(anchor, navItems);
 		}
 		let cssClass = anchor.getAttribute("class");
@@ -67,5 +67,7 @@ function setTabs(){
 			highlight(anchor, navItems);
 		};
 	};
-
+	setTimeout(()=>{
+		document.querySelector(".content").style.display = "";
+	},400);
 }
