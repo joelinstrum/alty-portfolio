@@ -14,10 +14,16 @@
 	<div class="home-line3"></div>
 	<div class="background">
 		<div class="nav nav-media">
-			<a class="a a2" href="#" data-div="home">HOME</a>
+			<!-- <a class="a a2" href="#" data-div="home">HOME</a>
 			<a class="b b2" href="#" data-div="about">ABOUT</a>
 			<a class="c c2" href="#" data-div="gallery">WORK</a>
-			<a class="d d2" href="#" data-div="contact-items">CONTACT</a>
+			<a class="d d2" href="#" data-div="contact-items">CONTACT</a> -->
+			<ul class="nav-ul">
+				<li class="a"><a class="a2" href="#" data-div="home">HOME</a></li>
+				<li class="b"><a class="b2" href="#" data-div="about">ABOUT</a></li>
+				<li class="c"><a class="c2" href="#" data-div="gallery">WORK</a></li>
+				<li class="d"><a class="d2" href="#" data-div="contact-items">CONTACT</a></li>
+			</ul>
 		</div>
 		<div class="content">
 			<div class="home">
@@ -71,14 +77,13 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script>
+		// function for the nav
 		$(document).ready(function(){
 			$("a").click(function(){
 				var selected = $(this);
 				$("a").removeClass("active");
 				$(selected).addClass("active");
 			});
-
-			
 
 			// this sets up the onmouseover functions for the gallery-work a hrefs
 			let workRefs = document.querySelector(".gallery");
