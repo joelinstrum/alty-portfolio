@@ -91,9 +91,12 @@ body p {
 	text-align: center;
 	transition: 600ms;
 }
-.nav a {
+.nav li a {
 	text-decoration: none;
 	color: #fff;
+}
+.nav li:hover a{
+	color:#000;
 }
 li.active, .nav li:hover {
 	background: #fff;
