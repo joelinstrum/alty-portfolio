@@ -155,6 +155,7 @@ li.active, .nav li:hover {
 	font-size: 1em;
 	cursor: pointer;
 }
+
 #skills-div h3 {
 	color: #f70455;
 	text-shadow: 2px 2px #000;
@@ -299,6 +300,8 @@ li.active, .nav li:hover {
   height:auto;
   margin-top: 20px;
   position:fixed;
+  -webkit-transform-origin: left top;
+  -webkit-transform:rotate(-90deg) translateX(-100%);
 }
 ul.nav2 li {   
   display: flex;
@@ -483,9 +486,8 @@ ul.nav2 li {
 	justify-content: center;
 	align-self: center;
 	color: orange;
-}
 
-	.card:after{
+	&:after{
 		content:" ";
 		position: absolute;
 		width: 100%;
@@ -507,12 +509,12 @@ ul.nav2 li {
 		transform: translateZ(50px);
 		display: block;
 		color: orange;
+		&.related{
+			transform: translateZ(80px);
+			font-style: italic;
+		}
 	}
-	p.related {
-		transform: translateZ(80px);
-		font-style: italic;
-	}
-
+}
 .card-content {
 	display: flex;
 	justify-content: center;
@@ -865,6 +867,7 @@ ul.nav2 li {
 		flex-direction: column;
 	}
 	.main-nav {
+		-webkit-transform: none;
 		order: 2;
 		position: initial;
 		width: 100%;
