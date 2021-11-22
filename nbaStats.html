@@ -1,76 +1,106 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Altynay Linstrum/movieGif</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<meta name="viewport" content="width=device-width" />
-</head>
-<body>
-	<div class="gif-home-line"></div>
-	<div class="gif-home-line3"></div>
-	<div class="background1">
-	<!-- NAVBAR -->
-		<div class="main-nav">
-			<ul class="nav2">
-				<li><a class="a2" href="index.php">HOME</a></li>
-				<li><a class="b2" href="index.php">ABOUT</a></li>
-				<li><a class="c2 active" href="index.php">WORK</a></li>
-				<li><a class="d2" href="index.php">CONTACT</a></li>
-			</ul>
-		</div>
-		<!-- PROJECT DISPLAY -->
-		<div class="fold-div">
-			<a href="http://nbastats.codingdiva.com" target="_blank" class="nbastats-a">
-				<div class="card">
-					<div class="card-content">
-						<h1>nbaStats</h1>
-						<p>latest news and stats about basketball</p>
-					</div>
-				</div>
-			</a>
-			<div class="fold-div-content">
-				<h1>nbaStats</h1>
-				<p>A mobile friendly app that allows the user to choose two NBA players to compare their performance on the chart. The front page contains trending news on basketball.</p>
-				<p>&nbsp;</p>
-				<h1>Technologies</h1>
-				<ul id="technologies">
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>Flexbox</li>
-					<li>JavaScript</li>
-					<li>Node.js</li>
-					<li>Express.js</li>
-					<li>MySQL</li>
-					<li>Ajax</li>
-					<li>MySportsFeeds</li>
-					<li>Chart.js</li>
-				</ul>
-				<h1>Contributors</h1>
-				<ul id="technologies">
-					<li><a href="https://github.com/starm-bruin">Steven Armstrong</a></li>
-					<li><a href="https://github.com/DeeVine">Darren Kwong</a></li>
-					<li><a href="https://github.com/jinredhub">Jin Redmond</a></li>
-				</ul>
-			</div>
-			<div class="go-back-div" onclick="document.location.href = 'index.php?active=work'">
-				<p>Go Back</p>
-				<i class="fas fa-angle-double-up go-back-icon"></i>
-			</div>
-		</div>
-	</div>
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+  <head>
+    <title>Altynay Linstrum/movieGif</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    <div class="gif-home-line"></div>
+    <div class="gif-home-line3"></div>
+    <div class="background1">
+      <!-- NAVBAR -->
+      <div class="main-nav">
+        <ul class="nav2">
+          <li><a class="a2" href="./">HOME</a></li>
+          <li><a class="b2" href="./">ABOUT</a></li>
+          <li><a class="c2 active" href="./">WORK</a></li>
+          <li><a class="d2" href="./">CONTACT</a></li>
+        </ul>
+      </div>
+      <!-- PROJECT DISPLAY -->
+      <div class="fold-div">
+        <a
+          href="http://nbastats.codingdiva.com"
+          target="_blank"
+          class="nbastats-a"
+        >
+          <div class="card">
+            <div class="card-content">
+              <h1>nbaStats</h1>
+              <p>latest news and stats about basketball</p>
+            </div>
+          </div>
+        </a>
+        <div class="fold-div-content">
+          <h1>nbaStats</h1>
+          <p>
+            A mobile friendly app that allows the user to choose two NBA players
+            to compare their performance on the chart. The front page contains
+            trending news on basketball.
+          </p>
+          <p>&nbsp;</p>
+          <h1>Technologies</h1>
+          <ul id="technologies">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Flexbox</li>
+            <li>JavaScript</li>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>MySQL</li>
+            <li>Ajax</li>
+            <li>MySportsFeeds</li>
+            <li>Chart.js</li>
+          </ul>
+          <h1>Contributors</h1>
+          <ul id="technologies">
+            <li>
+              <a href="https://github.com/starm-bruin">Steven Armstrong</a>
+            </li>
+            <li><a href="https://github.com/DeeVine">Darren Kwong</a></li>
+            <li><a href="https://github.com/jinredhub">Jin Redmond</a></li>
+          </ul>
+        </div>
+        <div
+          class="go-back-div"
+          onclick="document.location.href = './?active=work'"
+        >
+          <p>Go Back</p>
+          <i class="fas fa-angle-double-up go-back-icon"></i>
+        </div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
-	<script>
-		var card = $(".card");
-		$(document).on("mousemove",function(e) {  
-			var ax = -($(window).innerWidth()/2- e.pageX)/20;
-			var ay = ($(window).innerHeight()/2- e.pageY)/10;
-			card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
-		});
-	</script>
-</body>
+    <script>
+      var card = $(".card");
+      $(document).on("mousemove", function (e) {
+        var ax = -($(window).innerWidth() / 2 - e.pageX) / 20;
+        var ay = ($(window).innerHeight() / 2 - e.pageY) / 10;
+        card.attr(
+          "style",
+          "transform: rotateY(" +
+            ax +
+            "deg) rotateX(" +
+            ay +
+            "deg);-webkit-transform: rotateY(" +
+            ax +
+            "deg) rotateX(" +
+            ay +
+            "deg);-moz-transform: rotateY(" +
+            ax +
+            "deg) rotateX(" +
+            ay +
+            "deg)"
+        );
+      });
+    </script>
+  </body>
 </html>
-
